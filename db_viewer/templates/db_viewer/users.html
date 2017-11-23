@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<head>
+	<link rel="stylesheet" href="{% static 'css/users.css' %}">
+</head>
+<html>
+		<ul>
+			<li><a href="#index">Home</a></li>
+			<li><a  href="#games">Games</a></li>
+			<li><a  class="active" href="#users">Users</a></li>
+
+		</ul>
+	<button type="submit" value="next" frommethod="GET" class="next"> > </button>
+	<div class="main">
+		<div class=Users>
+		{%  for user in users %}
+			<div class=User>
+				<div class="id">
+					ID: {{user.id}}
+				</div>
+				<div class="nick">
+					Nick: {% if user.persona_name %} {{user.persona_name}} {% endif %}
+				</div>
+				<div class="name">
+					Name: {% if user.real_name %} {{user.real_name}} {% endif %}
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+</html>

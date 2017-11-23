@@ -1,0 +1,75 @@
+body {margin:0;
+	background-color:#222;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.main{
+    margin-top:50px;
+}
+.Users{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width:35%;
+}
+.user{
+    text-align: center;
+    /*background-color: #fff;*/
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 10%;
+    /*color: white;*/
+    /*padding: 10px;*/
+}
+.id{
+    /*float:left;*/
+    color:white;
+}
+.nick{
+    /*margin-left: 16%;*/
+    color:white;
+}
+.name{
+    color:white;
+}
+
+.next {
+    list-style-type: none;
+    margin: 0/*;
+    padding: */0;
+    right:0;
+    width: 10%;
+    background-color: #f1f1f1;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
