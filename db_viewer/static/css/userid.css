@@ -40,25 +40,19 @@ li a:hover:not(.active) {
     margin-left: auto;
     margin-right: auto;
     width:35%;
-/*    border: 1px solid white;
-    text-align: center;
-    border-radius: 25px;
-    width: 35%;
-*/
-    margin: auto;
 }
-.User{
+.user{
     text-align: center;
     /*background-color: #fff;*/
     border: 1px solid white;
     border-radius: 20px;
     height: 10%;
+    width:30%;
     /*color: white;*/
-    padding: 5px;
-    margin-bottom: 5px;
-
+    /*padding: 5px;*/
+    /*margin-bottom: 5px;*/
+    position:fixed;
 }
-
 .id{
     /*float:left;*/
     color:white;
@@ -99,11 +93,28 @@ li a:hover:not(.active) {
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 
-.userbutton{
-    width:100%;
-    border-radius:20px;
-        display: table-cell;
-    border: 1px solid white;
-        margin-bottom: 5px;
+.friends{
+        color:black;
+    list-style-type: none;
+    margin: 0/*;
+    padding: */0;
+    left:0;
+    background-color: #f1f1f1;
+    height: 100%; /* Full height */
+    width:20%;
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
 
+.games{
+       color:black;
+    list-style-type: none;
+    margin: 0/*;
+    padding: */0;
+    right:0;
+    background-color: #f1f1f1;
+    width:20%;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /*
 }

@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <head>
-	<link rel="stylesheet" href="{% static 'css/users.css' %}">
+	<link rel="stylesheet" href="{% static 'css/userid.css' %}">
 </head>
 <html>
 		<ul>
@@ -9,18 +9,17 @@
 			<li><a  class="active" href="/users/">Users</a></li>
 
 		</ul>
-	<form action="" method="GET">
-		<button name="next" value="next" class="next">></button>
-	</form>
-		<form action="" method="GET">
-		<button name="prev" value="prev" class="prev" {{disabled}}><</button>
-	</form>
 	<!-- <button type="submit" value="next" formmethod="GET" class="next"> > </button> -->
 	<div class="main">
+		<div class="friends">
+			{% for friend in friends %}
+				<div class="friend">
+					ID: {{friend.steamid2}}
+				</div>
+			{% endfor %}
+		</div>
 		<div class=Users>
-		{%  for user in users %}
-			<form action="" method="GET">
-			<button name = "steamid" value= "{{user.id}}" class=userbutton>
+			<div class=User>
 				<div class="id">
 					ID: {{user.id}}
 				</div>
@@ -30,9 +29,14 @@
 				<div class="name">
 					Name: {% if user.real_name %} {{user.real_name}} {% endif %}
 				</div>
-			</button>
-			</form>
-		{% endfor %}
+			</div>
+		</div>
+		<div class="games">
+			{% for game in games %}
+				<div class="game">
+					GameID: {{game.appid}}
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 </html>
