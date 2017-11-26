@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<head>
+	<link rel="stylesheet" href="{% static 'css/appid.css' %}">
+</head>
+<html>
+		<ul>
+			<li><a href= "/">Home</a></li>
+			<li><a  class="active" href="/games/">Games</a></li>
+			<li><a   href="/users/">Users</a></li>
+
+		</ul>
+	<div class="main">
+		<div class="game">
+			<div class="pic">
+
+			</div>
+			<div class="name">
+				{{game.name}}
+			</div>
+			<div class="score">
+				{% if game.metascore %}
+				{{game.metascore}}
+				{% endif %}
+			</div>
+			<div class="dev">
+				{{game.devid.name}}
+			<div class="publisher">
+				{{game.pubid.name}}
+			</div>
+			<div class="price">
+				R${{game.price}}
+			</div>
+			<div class="review">
+				{% if review %}
+				<font color="green">/\</font>{{pos}}/{{neg}}<font color="red">\/</font>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div class="relGames">
+		<div class="rel">
+			Related games
+		</div>
+				{% for relate in related %}
+		<form  action="" method="GET">
+			<button name="appid" value="{{relate.relatedid.appid}}" class="gameb">
+					{% if relate.relatedid.name %}
+						{{relate.relatedid.name}}
+					{% else %}
+						{{relate.relatedid.appid}}
+					{% endif %}
+			</button>
+		</form>
+				{% endfor %}
+	</div>
+</html>				

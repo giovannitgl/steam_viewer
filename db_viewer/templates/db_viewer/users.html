@@ -20,15 +20,15 @@
 		<div class=Users>
 		{%  for user in users %}
 			<form action="" method="GET">
-			<button name = "steamid" value= "{{user.id}}" class=userbutton>
+			<button name = "steamid" value= "{{user.uid}}" class=userbutton>
 				<div class="id">
-					ID: {{user.id}}
+					ID: {{user.uid}}
 				</div>
 				<div class="nick">
-					Nick: {% if user.persona_name %} {{user.persona_name}} {% endif %}
+					Nick: {% if user.nickname %} {{user.nickname}} {% endif %}
 				</div>
 				<div class="name">
-					Name: {% if user.real_name %} {{user.real_name}} {% endif %}
+					Name: {% if user.realname %} {{user.realname}} {% endif %}
 				</div>
 			</button>
 			</form>

@@ -31,3 +31,63 @@ li a:hover:not(.active) {
 .active {
     background-color: #4CAF50;
 }
+
+.main{
+    margin-top:50px;
+}
+.Games{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+/*    border: 1px solid white;
+    text-align: center;
+    border-radius: 25px;
+    width: 35%;
+*/
+    margin: auto;
+}
+.id{
+    /*float:left;*/
+    color:white;
+}
+.name{
+    color:white;
+}
+
+.next {
+    color:black;
+    opacity: 0.2;
+    list-style-type: none;
+    margin: 0/*;
+    padding: */0;
+    right:0;
+    width: 10%;
+    background-color: #f1f1f1;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+.prev {
+    color:black;
+    opacity:0.2;
+    list-style-type: none;
+    margin: 0/*;
+    padding: */0;
+    left:0;
+    width: 10%;
+    background-color: #f1f1f1;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+.gameb{
+    width:100%;
+    border-radius:20px;
+        display: table-cell;
+    border: 1px solid white;
+        margin-bottom: 5px;
+
+}

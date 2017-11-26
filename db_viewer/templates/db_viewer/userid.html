@@ -13,29 +13,41 @@
 	<div class="main">
 		<div class="friends">
 			{% for friend in friends %}
-				<div class="friend">
-					ID: {{friend.steamid2}}
-				</div>
+				<form action="" method="GET">
+				<button name="steamid" value="{{friend.uid2.uid}}" class="friend">
+					{% if friend.uid2.nickname %}
+					{{friend.uid2.nickname}}
+					{% else %}
+					ID: {{friend.uid2.uid}}
+					{% endif %}
+				</button>
+				</form>
 			{% endfor %}
 		</div>
 		<div class=Users>
 			<div class=User>
 				<div class="id">
-					ID: {{user.id}}
+					ID: {{user.uid}}
 				</div>
 				<div class="nick">
-					Nick: {% if user.persona_name %} {{user.persona_name}} {% endif %}
+					Nick: {% if user.nickname %} {{user.nickname}} {% endif %}
 				</div>
 				<div class="name">
-					Name: {% if user.real_name %} {{user.real_name}} {% endif %}
+					Name: {% if user.realname %} {{user.realname}} {% endif %}
 				</div>
 			</div>
 		</div>
 		<div class="games">
 			{% for game in games %}
-				<div class="game">
-					GameID: {{game.appid}}
-				</div>
+				<form action="" method="GET">
+				<button name="appid" value="{{game.appid.appid}}" class="game">
+					{% if game.appid.name %}
+					{{game.appid.name}}
+					{% else %}
+					AppId: {{game.appid.appid}}
+					{% endif %}
+				</button>
+				</form>
 			{% endfor %}
 		</div>
 	</div>

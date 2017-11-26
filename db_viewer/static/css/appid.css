@@ -1,0 +1,104 @@
+body {margin:0;
+	background-color:#222;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.main{
+    margin-top:50px;
+}
+
+.id{
+    /*float:left;*/
+    color:white;
+}
+.nick{
+    /*margin-left: 16%;*/
+    color:white;
+}
+.name{
+    color:white;
+    padding:10px;
+
+}
+.price{
+    color:white;
+    padding:10px;
+}
+.score{
+    color:white;
+    padding:10px;
+    float:right;
+}
+.pic{
+    width: 200px;
+    height: 100px;
+    border:1px solid white;
+    float:left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.dev{
+    color:white;
+    margin-bottom: 5px;
+}
+.publisher{
+    color:white;
+}
+.review{
+    color:white;
+    margin-left: 10px;
+}
+.game{
+    border:1px solid white;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: black;
+}
+.relgames{
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.rel{
+    width: 100%;
+    background-color: black;
+    color:white;
+    border:1px white solid;
+}
+.gameb{
+    width:100%;
+}
