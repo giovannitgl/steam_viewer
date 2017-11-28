@@ -1,1 +1,2 @@
 *.pyc
+steam_webapp/db_conf.py
