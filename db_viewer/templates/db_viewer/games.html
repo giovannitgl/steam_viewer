@@ -1,35 +1,35 @@
 {% load staticfiles %}
 <head>
-	<link rel="stylesheet" href="{% static 'css/games.css' %}">
+  <link rel="stylesheet" href="{% static 'css/games.css' %}">
 </head>
 <html>
-	<ul>
-		<li><a href="/">Home</a></li>
-		<li><a class="active" href="/games/">Games</a></li>
-		<li><a href="/users/">Users</a></li>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a class="active" href="/games/">Games</a></li>
+    <li><a href="/users/">Users</a></li>
+  </ul>
+  <form action="" method="GET">
+    <button name="next" value="next" class="next">></button>
+  </form>
+  <form action="" method="GET">
+    <button name="prev" value="prev" class="prev" {{disabled}}><</button>
+  </form>
 
-	</ul>
-		<form action="" method="GET">
-		<button name="next" value="next" class="next">></button>
-	</form>
-		<form action="" method="GET">
-		<button name="prev" value="prev" class="prev" {{disabled}}><</button>
-	</form>
-	<!-- <button type="submit" value="next" formmethod="GET" class="next"> > </button> -->
-	<div class="main">
-		<div class=Games>
-		{%  for game in games %}
-			<form action="" method="GET">
-			<button name = "appid" value= "{{game.appid}}" class=gameb>
-				<div class="id">
-					ID: {{game.appid}}
-				</div>
-				<div class="name">
-					Name: {% if game.name %} {{game.name}} {% endif %}
-				</div>
-			</button>
-			</form>
-		{% endfor %}
-		</div>
-	</div>
+  <div class="main">
+    <div class=Games>
+      {%  for game in games %}
+      <form action="" method="GET">
+        <button name = "appid" value= "{{game.appid}}" class=gameb>
+          <div class="id">
+            ID: {{game.appid}}
+          </div>
+          <div class="name">
+            Name: {% if game.name %} {{game.name}} {% endif %}
+          </div>
+        </button>
+      </form>
+      {% endfor %}
+    </div>
+  </div>
+
 </html>

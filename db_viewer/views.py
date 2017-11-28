@@ -7,14 +7,11 @@ games_current = 0
 
 # Create your views here.
 def index(request):
-    if(request.GET.get('games')):
-        return redirect('games',permanent=True)
-    elif(request.GET.get('users')):
-        return redirect('users',permanent=True)
-    return render(request,'db_viewer/index.html')
-
-def games(request):
-    return render(request,'db_viewer/games.html')
+    if request.GET.get('games'):
+        return redirect('games', permanent=True)
+    elif request.GET.get('users'):
+        return redirect('users', permanent=True)
+    return render(request,'db_viewer/index3.html')
 
 def game_id(request,appid):
     return render(request,'db_viewer/appid.html',{})
@@ -34,7 +31,7 @@ def users(request):
         elif user_current == 10:
             user_current -= 10
     entries = User.objects.all()[user_current:user_current+10]
-    return render(request,'db_viewer/users.html',{'users':entries,'disabled':disabled})
+    return render(request,'db_viewer/users2.html',{'users':entries,'disabled':disabled})
 
 def userid(request,steamid):
     if(request.GET.get('steamid')):
@@ -61,18 +58,18 @@ def apps(request,appid):
     return render(request,'db_viewer/appid.html',{'game':entry,'review':review,'pos':review.positive,'neg':review.total-review.positive,'related':related})
 
 def games(request):
-    if(request.GET.get('appid')):
-        return redirect(apps,request.GET.get('appid'))
+    if request.GET.get('appid'):
+        return redirect(apps, request.GET.get('appid'))
     global games_current
     disabled = 'disabled'
-    if(request.GET.get('next')):
+    if request.GET.get('next'):
         games_current += 10
         disabled = ''
-    elif(request.GET.get('prev')):
+    elif request.GET.get('prev'):
         if games_current > 10:
             disabled = ''
             games_current -= 10
         elif games_current == 10:
             games_current -= 10
     entries = App.objects.all()[games_current:games_current+10]
-    return render(request,'db_viewer/games.html',{'games':entries})
+    return render(request,'db_viewer/games2.html',{'games':entries})

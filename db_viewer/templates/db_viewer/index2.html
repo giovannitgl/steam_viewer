@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang='en'>
+  {% load staticfiles %}
+  <head>
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/index.css">
+  </head>
+  <div class="centerbox"> 
+    <div class="logo">
+      <img src="{% static 'images/steam_viewer.png' %}">
+    </div>
+    <div class="vis_text">
+    </div>
+    <div class="middle">
+      <div class="but1">
+        <form action="" method="GET">
+          <button name="games" value="games" class="games">Games</button>
+        </form>
+      </div>
+      <div class="but2">
+        <form action="" method="GET">
+          <button name="users" value="users" class="users">Users</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</html>
